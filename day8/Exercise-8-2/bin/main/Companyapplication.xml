@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="employee" class="com.example.demo.Employee">
+		<property name="name" value="Edureka"></property>
+	</bean>
+	
+	<bean id="company_with_ByName" class="com.example.demo.Company" autowire="byName">
+		<!-- <property name="employee" ref="employee"></property> -->	
+	</bean>
+	
+	<bean id="company_with_ByType" class="com.example.demo.Company" autowire="byType">
+		<!-- <property name="employee" ref="employee"></property> -->	
+	</bean>
+	
+	<bean id="company_with_ByConstructor" class="com.example.demo.Company" autowire="constructor">
+		<!-- <property name="employee" ref="employee"></property> -->	
+	</bean>
+
+</beans>
